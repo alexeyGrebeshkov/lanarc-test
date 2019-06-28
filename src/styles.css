@@ -1,0 +1,32 @@
+.container {
+    margin: 0 auto;
+}
+
+game-board-cell {
+    display: inline-block;
+}
+
+.cell {
+    width: 50px;
+    height: 30px;
+    margin: 3px;
+    text-align: center
+}
+
+.hidden {
+    background-color: #000;
+    color: #fff;
+}
+
+.visible {
+    background-color: yellow;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.disabled.hidden {
+    background-color: yellow;
+    color: #000;
+}

@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row" *ngFor="let row of gameService.gameModel; let i=index">
+    <ng-container *ngFor="let cell of gameService.gameModel[i]; let j=index">
+      <game-board-cell [value]="gameService.gameModel[i][j]"
+                       (cellHasBeenClicked)="handleCellClick($event)">
+      </game-board-cell>
+    </ng-container>
+  </div>
+</div>
