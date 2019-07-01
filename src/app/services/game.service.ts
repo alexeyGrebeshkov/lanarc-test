@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 const enum RANGE {
   MIN = 1,
-  MAX = 99
+  MAX = 899
 }
 
 const getRandom = (): number => Math.floor(Math.random() * (RANGE.MAX - RANGE.MIN)) + RANGE.MIN;
@@ -36,7 +36,7 @@ const shuffleArray = (arr: number[]): void => {
   }
 };
 
-const getMatrix = (arr: number[], width = 6, height = 6): number[][] => {
+const getMatrix = (arr: number[], width = 30, height = 30): number[][] => {
   if (arr.length !== width * height) {
     throw new Error(`Can't create a matrix based on current width of ${ width } and height of ${ height }.`);
   }
@@ -60,8 +60,8 @@ const getMatrix = (arr: number[], width = 6, height = 6): number[][] => {
 
 @Injectable()
 export class GameService {
-  readonly height: number = 6;
-  readonly width: number = 6;
+  readonly height: number = 30;
+  readonly width: number = 30;
   readonly gameModel: number[][];
 
   constructor() {
